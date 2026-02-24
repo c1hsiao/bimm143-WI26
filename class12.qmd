@@ -1,0 +1,33 @@
+---
+title: "Class12"
+format: html
+editor: visual
+---
+
+
+```{r}
+SNP<-read.csv("373531-SampleGenotypes-Homo_sapiens_Variation_Sample_rs8067378.csv")
+nrow(SNP[SNP$Genotype..forward.strand. %in% c("A|A","T|T","C|C","G|G"),])/nrow(SNP)
+
+```
+
+
+
+
+
+HW
+
+```{r}
+HW<-read.table("rs8067378_ENSG00000172057.6.txt")
+
+summary(HW)
+
+```
+
+
+```{r}
+boxplot(exp ~ geno, data = HW)
+
+
+```
+It is an additive genotype that we can observe dosage effect of allele A. And yes.
